@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>条件渲染</title>
+    <script src="js/vue.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="example">
+    <h1 v-if="awesome">Vue is awesome!</h1>
+    <h1 v-else>Oh no 😢</h1>
+    <div v-if="type === 'A'">
+        A
+    </div>
+    <div v-else-if="type === 'B'">
+        B
+    </div>
+    <div v-else-if="type === 'C'">
+        C
+    </div>
+    <div v-else>
+        Not A/B/C
+    </div>
+</div>
+<script>
+    var vm = new Vue({
+        el:'#example',
+        data:{
+            'awesome' : true,
+            'type':''
+        }
+    });
+</script>
+</body>
+</html>
